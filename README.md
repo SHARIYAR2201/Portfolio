@@ -135,12 +135,11 @@ I use GitHub to document my learning journey, experiment with new technologies, 
 
 ## 📫 Connect With Me
 
-**GitHub:** [Your GitHub Profile]
+**GitHub:** https://github.com/SHARIYAR2201
 
-**LinkedIn:** [Your LinkedIn Profile]
+**LinkedIn:** https://www.linkedin.com/in/shariyarakbar108/
 
-**Email:** [Your Email]
-
+**Email:** sapunno@gmail.com
 ---
 
 ### ⭐ Thanks for visiting!
