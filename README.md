@@ -135,6 +135,8 @@ I use GitHub to document my learning journey, experiment with new technologies, 
 
 ## 📫 Connect With Me
 
+**Portfolio:** https://shariyar-portfolio.netlify.app/
+
 **GitHub:** https://github.com/SHARIYAR2201
 
 **LinkedIn:** https://www.linkedin.com/in/shariyarakbar108/
