@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Md Shariyar Akbar | Frontend Developer (MERN) | Portfolio</title>
-    <meta name="description" content="Portfolio of Md Shariyar Akbar - Frontend Developer (MERN Stack) and B.Sc. Computer Science and Engineering student at BRAC University. Skilled in React, Node.js, Express, MongoDB, Python, and OpenGL.">
+    <meta name="description" content="Portfolio of Md Shariyar Akbar - Frontend Developer (MERN Stack) and B.Sc. Computer Science and Engineering student at BRAC University. Skilled in React, Node.js, Express, MongoDB, Python, LLMs and SLMs, and Data Analytics.">
     <meta name="keywords" content="Md Shariyar Akbar, Frontend Developer, MERN Stack, React Developer, BRAC University, Web Developer Portfolio">
     <meta name="author" content="Md Shariyar Akbar">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Md Shariyar Akbar | Frontend Developer (MERN)">
-    <meta property="og:description" content="Explore my portfolio showcasing scalable MERN stack web applications, 3D game development using Python OpenGL, and creative frontend design.">
-    <meta property="og:image" content="./assets/profile.jpg">
+    <meta property="og:description" content="Explore my portfolio showcasing scalable MERN stack web applications, exploring LLMs and SLMs, developing skills in Data Analytics, and creative frontend design.">
+    <meta property="og:image" content="images/shariyar.jpg">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -82,7 +82,7 @@
                         <span class="typing-cursor">|</span>
                     </div>
                     <p class="hero-description">
-                        Motivated Computer Science and Engineering student at BRAC University with hands-on experience in building scalable MERN stack web applications, 3D game development using Python OpenGL, and applying AI/ML solutions to practical problems.
+                        Motivated Computer Science and Engineering student at BRAC University with hands-on experience in building scalable MERN stack web applications, exploring LLMs and SLMs, developing skills in Data Analytics, and applying AI/ML solutions to practical problems.
                     </p>
                     <div class="hero-actions">
                         <a href="#projects" class="btn btn-primary">
@@ -95,10 +95,10 @@
                         </a>
                     </div>
                     <div class="hero-socials">
-                        <a href="https://github.com/shariyar2201" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="GitHub">
+                        <a href="https://github.com/SHARIYAR2201" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="GitHub">
                             <i class="ph ph-github-logo"></i>
                         </a>
-                        <a href="https://linkedin.com/in/shariyar-akbar" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="LinkedIn">
+                        <a href="https://www.linkedin.com/in/shariyarakbar108/" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="LinkedIn">
                             <i class="ph ph-linkedin-logo"></i>
                         </a>
                         <a href="mailto:sapunno@gmail.com" class="social-icon-btn" aria-label="Email">
@@ -112,7 +112,10 @@
                 <div class="hero-visual reveal-scale">
                     <div class="image-frame">
                         <div class="frame-backdrop"></div>
-                        <img src="./assets/profile.jpg" alt="Md Shariyar Akbar" class="profile-img">
+                        <picture>
+                            <source srcset="images/shariyar.webp" type="image/webp">
+                            <img src="images/shariyar.jpg" alt="Md Shariyar Akbar" class="profile-img" width="900" height="1125" fetchpriority="high">
+                        </picture>
                         <div class="badge-card badge-experience">
                             <div class="badge-icon">
                                 <i class="ph ph-code"></i>
@@ -157,7 +160,7 @@
                             I am currently pursuing a <strong>B.Sc. in Computer Science and Engineering</strong> at <strong>BRAC University</strong> (2022 – 2026). My academic foundation, combined with hands-on web development courses and independent specializations, has shaped me into a versatile frontend developer specializing in the MERN stack.
                         </p>
                         <p class="about-text">
-                            Beyond standard web applications, I have a deep curiosity for computer graphics and emerging tech, demonstrated by building 3D games with Python OpenGL, and analyzing research papers for AI/ML specializations. I value clean, maintainable code, close team collaboration, and constant adaptability.
+                            Beyond standard web applications, I have a deep curiosity for emerging tech, from exploring Large and Small Language Models (LLMs and SLMs) and developing skills in Data Analytics to analyzing research papers for AI/ML specializations. I value clean, maintainable code, close team collaboration, and constant adaptability.
                         </p>
                         
                         <div class="personal-info-grid">
@@ -401,6 +404,16 @@
                             <div class="skills-grid">
                                 <div class="skill-card glass-card">
                                     <div class="skill-info">
+                                        <i class="ph ph-microsoft-excel-logo skill-icon"></i>
+                                        <span class="skill-name">Microsoft Excel (Professional)</span>
+                                    </div>
+                                    <div class="progress-bar-container">
+                                        <div class="progress-bar" style="width: 80%"></div>
+                                    </div>
+                                    <span class="skill-percentage">80%</span>
+                                </div>
+                                <div class="skill-card glass-card">
+                                    <div class="skill-info">
                                         <i class="ph ph-microsoft-office-logo skill-icon"></i>
                                         <span class="skill-name">MS Office Suite</span>
                                     </div>
@@ -458,101 +471,140 @@
                 <div class="projects-filter reveal-up">
                     <button class="filter-btn active" data-filter="all">All</button>
                     <button class="filter-btn" data-filter="mern">MERN Stack</button>
-                    <button class="filter-btn" data-filter="game">Python & Game Dev</button>
+                    <button class="filter-btn" data-filter="ai">AI / ML</button>
+                    <button class="filter-btn" data-filter="fullstack">FastAPI &amp; Next.js</button>
+                    <button class="filter-btn" data-filter="game">Python &amp; Game Dev</button>
                 </div>
 
                 <div class="projects-grid">
-                    <!-- Project 1: Job-Nest -->
-                    <div class="project-card glass-card reveal-up" data-category="mern">
+                    <article class="project-card glass-card reveal-up" data-category="other" data-project="sync-space" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Open details for Sync Space">
                         <div class="project-image-wrapper">
-                            <div class="project-placeholder-img mern-placeholder">
-                                <i class="ph ph-briefcase"></i>
-                            </div>
+                            <div class="project-placeholder-img mern-placeholder"><i class="ph ph-users-three"></i></div>
                             <div class="project-overlay">
-                                <a href="https://github.com/shariyar2201" target="_blank" rel="noopener noreferrer" class="project-action-link" aria-label="View Source Code">
-                                    <i class="ph ph-github-logo"></i>
-                                </a>
-                                <a href="#" class="project-action-link" aria-label="View Live Project">
-                                    <i class="ph ph-arrow-square-out"></i>
-                                </a>
+                                <a href="https://github.com/SHARIYAR2201/Sync_space" target="_blank" rel="noopener noreferrer" class="project-action-link" aria-label="View source code for Sync Space"><i class="ph ph-github-logo"></i></a>
+                                <span class="project-action-link" aria-hidden="true"><i class="ph ph-arrows-out-simple"></i></span>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-tag">GitHub Project</span>
+                            <h3 class="project-title">Sync Space</h3>
+                            <p class="project-desc">Public repository on GitHub. A full write-up of what it does and how it is built is being added.</p>
+                            <div class="project-tech-tags"><span>See repository</span></div>
+                            <span class="project-more">View details <i class="ph ph-arrow-right"></i></span>
+                        </div>
+                    </article>
+                    <article class="project-card glass-card reveal-up" data-category="ai" data-project="academic-predictor" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Open details for Academic Performance Predictor">
+                        <div class="project-image-wrapper">
+                            <div class="project-placeholder-img mern-placeholder"><i class="ph ph-student"></i></div>
+                            <div class="project-overlay">
+                                <a href="https://github.com/SHARIYAR2201/Academic-Performance-Predictor" target="_blank" rel="noopener noreferrer" class="project-action-link" aria-label="View source code for Academic Performance Predictor"><i class="ph ph-github-logo"></i></a>
+                                <span class="project-action-link" aria-hidden="true"><i class="ph ph-arrows-out-simple"></i></span>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-tag">AI / ML · Full-Stack</span>
+                            <h3 class="project-title">Academic Performance Predictor</h3>
+                            <p class="project-desc">Early-warning system that predicts student GPA and risk level with 8 ML models, SHAP explanations and role-based dashboards.</p>
+                            <div class="project-tech-tags"><span>Python</span><span>FastAPI</span><span>Next.js</span><span>PostgreSQL</span><span>scikit-learn</span><span>SHAP</span></div>
+                            <span class="project-more">View details <i class="ph ph-arrow-right"></i></span>
+                        </div>
+                    </article>
+                    <article class="project-card glass-card reveal-up" data-category="fullstack" data-project="veldora" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Open details for V-E-L-D-O-R-A">
+                        <div class="project-image-wrapper">
+                            <div class="project-placeholder-img mern-placeholder"><i class="ph ph-heartbeat"></i></div>
+                            <div class="project-overlay">
+                                <a href="https://github.com/SHARIYAR2201/V-E-L-D-O-R-A" target="_blank" rel="noopener noreferrer" class="project-action-link" aria-label="View source code for V-E-L-D-O-R-A"><i class="ph ph-github-logo"></i></a>
+                                <span class="project-action-link" aria-hidden="true"><i class="ph ph-arrows-out-simple"></i></span>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-tag">Full-Stack · FastAPI</span>
+                            <h3 class="project-title">V-E-L-D-O-R-A</h3>
+                            <p class="project-desc">Informational health, nutrition and fitness platform with progress analytics and rule-based recommendations.</p>
+                            <div class="project-tech-tags"><span>FastAPI</span><span>PostgreSQL</span><span>Redis</span><span>Next.js</span><span>Three.js</span></div>
+                            <span class="project-more">View details <i class="ph ph-arrow-right"></i></span>
+                        </div>
+                    </article>
+                    <article class="project-card glass-card reveal-up" data-category="mern" data-project="thesis-portal" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Open details for BRACU Thesis Management Portal">
+                        <div class="project-image-wrapper">
+                            <div class="project-placeholder-img mern-placeholder"><i class="ph ph-graduation-cap"></i></div>
+                            <div class="project-overlay">
+                                <a href="https://github.com/SHARIYAR2201/BRACU-THEIS-PORTAL-updated-self-" target="_blank" rel="noopener noreferrer" class="project-action-link" aria-label="View source code for BRACU Thesis Management Portal"><i class="ph ph-github-logo"></i></a>
+                                <span class="project-action-link" aria-hidden="true"><i class="ph ph-arrows-out-simple"></i></span>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-tag">MERN Stack · Academic</span>
+                            <h3 class="project-title">BRACU Thesis Management Portal</h3>
+                            <p class="project-desc">Manages thesis proposals, supervisor allocation, meetings and feedback through role-based workflows.</p>
+                            <div class="project-tech-tags"><span>React</span><span>Node.js</span><span>Express</span></div>
+                            <span class="project-more">View details <i class="ph ph-arrow-right"></i></span>
+                        </div>
+                    </article>
+                    <article class="project-card glass-card reveal-up" data-category="mern" data-project="job-nest" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Open details for Job-Nest">
+                        <div class="project-image-wrapper">
+                            <div class="project-placeholder-img mern-placeholder"><i class="ph ph-briefcase"></i></div>
+                            <div class="project-overlay">
+                                <a href="https://github.com/SHARIYAR2201/JOB_NEST" target="_blank" rel="noopener noreferrer" class="project-action-link" aria-label="View source code for Job-Nest"><i class="ph ph-github-logo"></i></a>
+                                <span class="project-action-link" aria-hidden="true"><i class="ph ph-arrows-out-simple"></i></span>
                             </div>
                         </div>
                         <div class="project-info">
                             <span class="project-tag">MERN Stack</span>
                             <h3 class="project-title">Job-Nest</h3>
-                            <p class="project-desc">
-                                A comprehensive Online Job Portal featuring role-based dashboards, job applications, tracking, resume uploads, and an integrated blog system for career articles.
-                            </p>
-                            <div class="project-tech-tags">
-                                <span>React</span>
-                                <span>Node.js</span>
-                                <span>Express</span>
-                                <span>MongoDB</span>
-                                <span>Firebase</span>
+                            <p class="project-desc">Online job portal with role-based dashboards, job applications and an integrated blog system.</p>
+                            <div class="project-tech-tags"><span>MongoDB</span><span>Express</span><span>React</span><span>Node.js</span></div>
+                            <span class="project-more">View details <i class="ph ph-arrow-right"></i></span>
+                        </div>
+                    </article>
+                    <article class="project-card glass-card reveal-up" data-category="ai" data-project="gesture-volume" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Open details for Gesture Volume Control">
+                        <div class="project-image-wrapper">
+                            <div class="project-placeholder-img mern-placeholder"><i class="ph ph-hand-pointing"></i></div>
+                            <div class="project-overlay">
+                                <a href="https://github.com/SHARIYAR2201/Gesture_Volume_Control" target="_blank" rel="noopener noreferrer" class="project-action-link" aria-label="View source code for Gesture Volume Control"><i class="ph ph-github-logo"></i></a>
+                                <span class="project-action-link" aria-hidden="true"><i class="ph ph-arrows-out-simple"></i></span>
                             </div>
                         </div>
-                    </div>
-
-                    <!-- Project 2: Alien Shooter 3D -->
-                    <div class="project-card glass-card reveal-up" data-category="game">
+                        <div class="project-info">
+                            <span class="project-tag">Computer Vision</span>
+                            <h3 class="project-title">Gesture Volume Control</h3>
+                            <p class="project-desc">Controls volume, brightness and media playback touch-free using webcam hand tracking.</p>
+                            <div class="project-tech-tags"><span>Python</span><span>OpenCV</span><span>MediaPipe</span><span>PyAutoGUI</span></div>
+                            <span class="project-more">View details <i class="ph ph-arrow-right"></i></span>
+                        </div>
+                    </article>
+                    <article class="project-card glass-card reveal-up" data-category="game" data-project="alien-shooter" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Open details for Alien Shooter 3D">
                         <div class="project-image-wrapper">
-                            <div class="project-placeholder-img game-placeholder">
-                                <i class="ph ph-game-controller"></i>
-                            </div>
+                            <div class="project-placeholder-img mern-placeholder"><i class="ph ph-game-controller"></i></div>
                             <div class="project-overlay">
-                                <a href="https://github.com/shariyar2201" target="_blank" rel="noopener noreferrer" class="project-action-link" aria-label="View Source Code">
-                                    <i class="ph ph-github-logo"></i>
-                                </a>
-                                <a href="#" class="project-action-link" aria-label="View Demo">
-                                    <i class="ph ph-play"></i>
-                                </a>
+                                <a href="https://github.com/SHARIYAR2201" target="_blank" rel="noopener noreferrer" class="project-action-link" aria-label="View source code for Alien Shooter 3D"><i class="ph ph-github-logo"></i></a>
+                                <span class="project-action-link" aria-hidden="true"><i class="ph ph-arrows-out-simple"></i></span>
                             </div>
                         </div>
                         <div class="project-info">
                             <span class="project-tag">OpenGL Game</span>
                             <h3 class="project-title">Alien Shooter 3D</h3>
-                            <p class="project-desc">
-                                A 3D survival shooting game developed in Python using OpenGL APIs. Focuses on low-level graphics rendering, 3D math, and collision detection performance.
-                            </p>
-                            <div class="project-tech-tags">
-                                <span>Python</span>
-                                <span>OpenGL</span>
-                                <span>Pygame</span>
-                                <span>3D Graphics</span>
-                            </div>
+                            <p class="project-desc">A 3D survival shooting game built in Python with OpenGL, focused on rendering, 3D math and collision detection.</p>
+                            <div class="project-tech-tags"><span>Python</span><span>OpenGL</span><span>Pygame</span><span>3D Graphics</span></div>
+                            <span class="project-more">View details <i class="ph ph-arrow-right"></i></span>
                         </div>
-                    </div>
-
-                    <!-- Project 3: Travelora -->
-                    <div class="project-card glass-card reveal-up" data-category="mern">
+                    </article>
+                    <article class="project-card glass-card reveal-up" data-category="mern" data-project="travelora" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Open details for Travelora">
                         <div class="project-image-wrapper">
-                            <div class="project-placeholder-img travel-placeholder">
-                                <i class="ph ph-airplane-tilt"></i>
-                            </div>
+                            <div class="project-placeholder-img mern-placeholder"><i class="ph ph-airplane-tilt"></i></div>
                             <div class="project-overlay">
-                                <a href="https://github.com/shariyar2201" target="_blank" rel="noopener noreferrer" class="project-action-link" aria-label="View Source Code">
-                                    <i class="ph ph-github-logo"></i>
-                                </a>
-                                <a href="#" class="project-action-link" aria-label="View Live Project">
-                                    <i class="ph ph-arrow-square-out"></i>
-                                </a>
+                                <a href="https://github.com/SHARIYAR2201" target="_blank" rel="noopener noreferrer" class="project-action-link" aria-label="View source code for Travelora"><i class="ph ph-github-logo"></i></a>
+                                <span class="project-action-link" aria-hidden="true"><i class="ph ph-arrows-out-simple"></i></span>
                             </div>
                         </div>
                         <div class="project-info">
                             <span class="project-tag">Team Web Project</span>
                             <h3 class="project-title">Travelora</h3>
-                            <p class="project-desc">
-                                An online travel management portal simplifying booking flights, hotels, and tours. Offers personalized itineraries, dynamic searching, and user dashboard.
-                            </p>
-                            <div class="project-tech-tags">
-                                <span>Node.js</span>
-                                <span>Express</span>
-                                <span>MongoDB</span>
-                                <span>HTML5/CSS3</span>
-                                <span>Tailwind CSS</span>
-                            </div>
+                            <p class="project-desc">Online travel management portal for booking flights, hotels and tours, with itineraries and a user dashboard.</p>
+                            <div class="project-tech-tags"><span>Node.js</span><span>Express</span><span>MongoDB</span><span>Tailwind CSS</span></div>
+                            <span class="project-more">View details <i class="ph ph-arrow-right"></i></span>
                         </div>
-                    </div>
+                    </article>
                 </div>
             </div>
         </section>
@@ -580,6 +632,26 @@
                                 <p class="timeline-desc">
                                     Currently pursuing undergraduate degree focusing on software engineering, web technologies, and computational architectures. CGPA: 2.90 out of 4.00. Located in Dhaka, Bangladesh.
                                 </p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item reveal-up">
+                            <div class="timeline-dot"><i class="ph ph-books"></i></div>
+                            <div class="timeline-content glass-card">
+                                <span class="timeline-date">HSC · GPA 5.00</span>
+                                <h3 class="timeline-title">Higher Secondary Certificate (HSC)</h3>
+                                <h4 class="timeline-institution">Mirpur Cantonment Public School and College</h4>
+                                <p class="timeline-desc">Completed with a GPA of 5.00 out of 5.00.</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item reveal-up">
+                            <div class="timeline-dot"><i class="ph ph-books"></i></div>
+                            <div class="timeline-content glass-card">
+                                <span class="timeline-date">SSC · GPA 5.00</span>
+                                <h3 class="timeline-title">Secondary School Certificate (SSC)</h3>
+                                <h4 class="timeline-institution">Monipur High School and College</h4>
+                                <p class="timeline-desc">Completed with a GPA of 5.00 out of 5.00.</p>
                             </div>
                         </div>
 
@@ -660,14 +732,18 @@
                                 </div>
                                 <div class="contact-card-info">
                                     <span>LinkedIn</span>
-                                    <a href="https://linkedin.com/in/shariyar-akbar" target="_blank" rel="noopener noreferrer">linkedin.com/in/shariyar-akbar</a>
+                                    <a href="https://www.linkedin.com/in/shariyarakbar108/" target="_blank" rel="noopener noreferrer">linkedin.com/in/shariyarakbar108</a>
                                 </div>
                             </div>
                         </div>
                     </div>
 
                     <div class="contact-form-container glass-card reveal-up">
-                        <form id="contact-form" class="contact-form">
+                        <form id="contact-form" class="contact-form" action="https://formsubmit.co/sapunno@gmail.com" method="POST" novalidate>
+                            <input type="hidden" name="_subject" value="New message from your portfolio">
+                            <input type="hidden" name="_captcha" value="false">
+                            <input type="hidden" name="_template" value="table">
+                            <input type="text" name="_honey" tabindex="-1" autocomplete="off" class="hp" aria-hidden="true">
                             <div class="form-group">
                                 <label for="name">Your Name</label>
                                 <input type="text" id="name" name="name" required placeholder="John Doe">
@@ -688,6 +764,7 @@
                                 <span>Send Message</span>
                                 <i class="ph ph-paper-plane-tilt"></i>
                             </button>
+                            <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
                         </form>
                     </div>
                 </div>
@@ -708,6 +785,20 @@
             </div>
         </div>
     </footer>
+
+    <div class="pm-backdrop" id="pm" hidden>
+        <div class="pm glass-card" role="dialog" aria-modal="true" aria-labelledby="pm-title">
+            <button class="pm-close" id="pm-close" aria-label="Close project details"><i class="ph ph-x"></i></button>
+            <span class="project-tag" id="pm-tag"></span>
+            <h3 id="pm-title" class="pm-title"></h3>
+            <p id="pm-overview" class="pm-text"></p>
+            <h4>Key features</h4>
+            <ul id="pm-feat" class="pm-list"></ul>
+            <h4>Technology</h4>
+            <div id="pm-tech" class="project-tech-tags"></div>
+            <div class="pm-actions"><a id="pm-repo" class="btn btn-primary" target="_blank" rel="noopener noreferrer"><span>View on GitHub</span><i class="ph ph-github-logo"></i></a></div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>

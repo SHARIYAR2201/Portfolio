@@ -88,10 +88,11 @@ document.addEventListener('DOMContentLoaded', () => {
        ========================================================================== */
     const typedTextSpan = document.getElementById('typed-text');
     const roles = [
-        "Frontend Developer (MERN)",
-        "MERN Stack Developer",
+        "Full-Stack Developer (MERN · FastAPI)",
+        "AI/ML & Computer Vision Enthusiast",
         "CS Student @ BRACU",
-        "3D OpenGL Game Developer"
+        "LLM & SLM Explorer",
+        "Developing Skills in Data Analytics"
     ];
     
     let roleIndex = 0;
@@ -261,31 +262,92 @@ document.addEventListener('DOMContentLoaded', () => {
     scrollTargets.forEach(target => spyObserver.observe(target));
 
     /* ==========================================================================
-       CONTACT FORM VALIDATION & MOCK SUBMIT
+       PROJECT DETAILS MODAL
+       ========================================================================== */
+    const PROJECTS = {"sync-space": {"tag": "GitHub Project", "title": "Sync Space", "overview": "Sync Space is a public repository on my GitHub. A detailed description of the problem it solves, its features and its architecture is being added; the repository holds the full source code.", "features": ["See the repository for features and setup"], "tech": ["See repository"], "repo": "https://github.com/SHARIYAR2201/Sync_space"}, "academic-predictor": {"tag": "AI / ML \u00b7 Full-Stack", "title": "Academic Performance Predictor", "overview": "Designed as an early-warning tool that surfaces students who may be struggling so support can come sooner. Combines a scikit-learn modelling workflow with SHAP explanations, a FastAPI backend, PostgreSQL storage and a Next.js interface.", "features": ["Predicts student GPA and risk level using 8 ML models", "Role-based dashboards for different user types", "Explainable AI insights using SHAP, so predictions can be interpreted"], "tech": ["Python", "FastAPI", "Next.js", "PostgreSQL", "scikit-learn", "SHAP"], "repo": "https://github.com/SHARIYAR2201/Academic-Performance-Predictor"}, "veldora": {"tag": "Full-Stack \u00b7 FastAPI", "title": "V-E-L-D-O-R-A", "overview": "V-E-L-D-O-R-A stands for Virtual Enhanced Lifestyle, Diet, Optimization, Recommendation & Analytics. It is an informational health, nutrition, fitness and wellness platform with a FastAPI, PostgreSQL and Redis backend and a Next.js 14 front end using Tailwind, Framer Motion, Three.js and Recharts. Recommendations are rule-based and trend figures are estimates; it is not a medical tool.", "features": ["Nutrition and calorie tracking", "Workout planning", "Progress analytics with trend estimates", "Rule-based recommendations"], "tech": ["FastAPI", "PostgreSQL", "Redis", "Next.js", "Tailwind CSS", "Framer Motion", "Three.js", "Recharts"], "repo": "https://github.com/SHARIYAR2201/V-E-L-D-O-R-A"}, "thesis-portal": {"tag": "MERN Stack \u00b7 Academic", "title": "BRACU Thesis Management Portal", "overview": "A full-stack portal that brings the thesis lifecycle at BRAC University into one place, with different roles for students and supervisors. Built with React on the front end and Node.js and Express on the back end.", "features": ["Thesis proposal submission and research discovery", "Supervisor allocation", "Meetings and feedback", "Role-based workflows"], "tech": ["React", "Node.js", "Express"], "repo": "https://github.com/SHARIYAR2201/BRACU-THEIS-PORTAL-updated-self-"}, "job-nest": {"tag": "MERN Stack", "title": "Job-Nest", "overview": "A MERN-stack job portal with separate role-based dashboards, job applications and a built-in blog system.", "features": ["Role-based dashboards", "Job applications", "Integrated blog system"], "tech": ["MongoDB", "Express", "React", "Node.js"], "repo": "https://github.com/SHARIYAR2201/JOB_NEST"}, "gesture-volume": {"tag": "Computer Vision", "title": "Gesture Volume Control", "overview": "Uses a webcam and MediaPipe hand tracking to turn hand positions into desktop actions, with PyAutoGUI sending the controls to the operating system.", "features": ["Controls volume, brightness and media playback with hand gestures", "Mute and lock controls", "Webcam-based hand tracking with MediaPipe"], "tech": ["Python", "OpenCV", "MediaPipe", "PyAutoGUI"], "repo": "https://github.com/SHARIYAR2201/Gesture_Volume_Control"}, "alien-shooter": {"tag": "OpenGL Game", "title": "Alien Shooter 3D", "overview": "A project built with Python and OpenGL APIs, centred on 3D math, rendering and collision detection.", "features": ["3D survival shooting gameplay", "Low-level graphics rendering with OpenGL", "Collision detection"], "tech": ["Python", "OpenGL", "Pygame", "3D Graphics"], "repo": "https://github.com/SHARIYAR2201"}, "travelora": {"tag": "Team Web Project", "title": "Travelora", "overview": "A team web project covering the booking flow end to end, built on Node.js, Express and MongoDB with a Tailwind CSS interface.", "features": ["Flight, hotel and tour booking", "Personalised itineraries and dynamic search", "User dashboard"], "tech": ["Node.js", "Express", "MongoDB", "Tailwind CSS"], "repo": "https://github.com/SHARIYAR2201"}};
+    const pm = document.getElementById('pm');
+    const pmClose = document.getElementById('pm-close');
+    let lastFocus = null;
+
+    function openProject(id) {
+        const p = PROJECTS[id];
+        if (!p) return;
+        lastFocus = document.activeElement;
+        document.getElementById('pm-tag').textContent = p.tag;
+        document.getElementById('pm-title').textContent = p.title;
+        document.getElementById('pm-overview').textContent = p.overview;
+        document.getElementById('pm-feat').innerHTML = p.features.map(f => `<li></li>`).join('');
+        document.querySelectorAll('#pm-feat li').forEach((li, i) => li.textContent = p.features[i]);
+        const tech = document.getElementById('pm-tech');
+        tech.innerHTML = '';
+        p.tech.forEach(t => { const sp = document.createElement('span'); sp.textContent = t; tech.appendChild(sp); });
+        document.getElementById('pm-repo').href = p.repo;
+        pm.hidden = false;
+        document.body.style.overflow = 'hidden';
+        pmClose.focus();
+    }
+    function closeProject() {
+        pm.hidden = true;
+        document.body.style.overflow = '';
+        if (lastFocus) lastFocus.focus();
+    }
+    document.querySelectorAll('.project-card[data-project]').forEach(card => {
+        card.addEventListener('click', e => {
+            if (e.target.closest('a')) return; // GitHub icon keeps its own link
+            openProject(card.dataset.project);
+        });
+        card.addEventListener('keydown', e => {
+            if ((e.key === 'Enter' || e.key === ' ') && e.target === card) {
+                e.preventDefault();
+                openProject(card.dataset.project);
+            }
+        });
+    });
+    pmClose.addEventListener('click', closeProject);
+    pm.addEventListener('click', e => { if (e.target === pm) closeProject(); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape' && !pm.hidden) closeProject(); });
+
+    /* ==========================================================================
+       CONTACT FORM: real delivery to sapunno@gmail.com via FormSubmit
        ========================================================================== */
     const contactForm = document.getElementById('contact-form');
-    
+    const statusEl = document.getElementById('form-status');
+
     if (contactForm) {
-        contactForm.addEventListener('submit', (e) => {
+        contactForm.addEventListener('submit', async (e) => {
             e.preventDefault();
-            
+            statusEl.className = 'form-status';
+            if (!contactForm.checkValidity()) {
+                contactForm.reportValidity();
+                return;
+            }
             const submitBtn = contactForm.querySelector('button[type="submit"]');
             const originalBtnText = submitBtn.innerHTML;
-            
-            // Temporary loading state
             submitBtn.disabled = true;
-            submitBtn.innerHTML = `<span>Sending...</span> <i class="ph ph-spinner-gap spin" style="animation: spin 1s linear infinite"></i>`;
-            
-            // Simulate API request delay
-            setTimeout(() => {
-                // Success message
-                alert(`Thank you for reaching out, ${document.getElementById('name').value}! I will get back to you shortly at ${document.getElementById('email').value}.`);
-                
-                // Reset form
-                contactForm.reset();
+            submitBtn.innerHTML = '<span>Sending...</span> <i class="ph ph-spinner-gap" style="animation: spin 1s linear infinite"></i>';
+            statusEl.textContent = '';
+
+            try {
+                const res = await fetch('https://formsubmit.co/ajax/sapunno@gmail.com', {
+                    method: 'POST',
+                    headers: { 'Accept': 'application/json' },
+                    body: new FormData(contactForm)
+                });
+                const out = await res.json().catch(() => ({}));
+                if (res.ok && String(out.success) !== 'false') {
+                    statusEl.textContent = 'Message sent. Thank you! I will reply to your email shortly.';
+                    statusEl.classList.add('ok');
+                    contactForm.reset();
+                } else {
+                    throw new Error(out.message || 'Request failed');
+                }
+            } catch (err) {
+                statusEl.innerHTML = 'Could not send right now. Please email me directly at <a href="mailto:sapunno@gmail.com">sapunno@gmail.com</a>.';
+                statusEl.classList.add('err');
+            } finally {
                 submitBtn.disabled = false;
                 submitBtn.innerHTML = originalBtnText;
-            }, 1500);
+            }
         });
     }
 });
