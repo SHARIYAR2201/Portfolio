@@ -342,7 +342,12 @@ document.addEventListener('DOMContentLoaded', () => {
                     throw new Error(out.message || 'Request failed');
                 }
             } catch (err) {
-                statusEl.innerHTML = 'Could not send right now. Please email me directly at <a href="mailto:sapunno@gmail.com">sapunno@gmail.com</a>.';
+                console.warn('Contact form error:', err.message);
+                // Fallback: open the visitor's mail app with everything pre-filled
+                const fd = new FormData(contactForm);
+                const body = `${fd.get('message') || ''}\n\nFrom: ${fd.get('name') || ''} (${fd.get('email') || ''})`;
+                const href = `mailto:sapunno@gmail.com?subject=${encodeURIComponent(fd.get('subject') || 'Portfolio message')}&body=${encodeURIComponent(body)}`;
+                statusEl.innerHTML = `Could not send right now. <a href="${href}">Click here to send it from your email app</a> or write to <a href="mailto:sapunno@gmail.com">sapunno@gmail.com</a>.`;
                 statusEl.classList.add('err');
             } finally {
                 submitBtn.disabled = false;

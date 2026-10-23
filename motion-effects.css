@@ -1,0 +1,22 @@
+/* Motion layer: additive. Original design in style.css is unchanged. */
+.hero-visual{perspective:900px}
+.m-on .hero-content>*{opacity:0}
+.m-on .section-line{transform:scaleX(0)}
+.m-on .pm{animation:none}
+/* let Motion own transforms on these elements */
+.m-on .badge-card,.m-on .btn,.m-on .social-icon-btn{transition-property:background,color,border-color,box-shadow,opacity}
+.m-on .badge-card:hover{transform:none}
+
+#scroll-progress{position:fixed;top:0;left:0;right:0;height:3px;z-index:9999;transform-origin:0 50%;transform:scaleX(0);
+  background:linear-gradient(90deg,var(--accent-primary,#e63946),#7a1020);pointer-events:none}
+
+/* Mobile fix: keep the floating badges off the face */
+@media (max-width:900px){
+  .hero-visual .image-frame .badge-card{padding:8px 12px;gap:9px;border-radius:14px}
+  .hero-visual .image-frame .badge-card .badge-icon{width:32px;height:32px;font-size:16px}
+  .hero-visual .image-frame .badge-card .badge-number{font-size:13px}
+  .hero-visual .image-frame .badge-card .badge-label{font-size:10px}
+  .hero-visual .image-frame .badge-card.badge-projects{top:auto;right:-8px;bottom:84px}
+  .hero-visual .image-frame .badge-card.badge-experience{top:auto;left:-8px;bottom:-16px}
+  .hero-visual{margin-bottom:20px}
+}
