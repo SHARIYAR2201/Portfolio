@@ -9,9 +9,10 @@
 .hero-demo .profile-img{border:0;border-radius:0;box-shadow:none;object-fit:contain;position:relative;
   filter:drop-shadow(0 24px 40px rgba(0,0,0,.45));
   -webkit-mask-image:linear-gradient(#000 80%,transparent 100%);mask-image:linear-gradient(#000 80%,transparent 100%)}
-.hero-bgtext{position:absolute;z-index:-1;left:50%;top:9%;transform:translateX(-50%);white-space:nowrap;
-  font:800 min(9vw,9.5rem)/1 Outfit,Inter,sans-serif;letter-spacing:-.02em;user-select:none;pointer-events:none;
+.hero-bgtext{position:absolute;z-index:-1;left:50%;top:9%;transform:translateX(-50%);white-space:nowrap;width:max-content;text-align:center;
+  font:800 min(5vw,5.5rem)/1 Outfit,Inter,sans-serif;letter-spacing:-.01em;user-select:none;pointer-events:none;
   color:rgba(var(--accent-primary-rgb),.1);-webkit-text-stroke:1px rgba(var(--accent-primary-rgb),.28)}
+.bg-br{display:none}
 
 .hero-side{display:flex;flex-direction:column;gap:26px;align-self:center;align-items:flex-end}
 .hero-expertise{align-self:flex-start;padding-left:10px}
@@ -36,7 +37,7 @@
   .hero-demo .hero-grid{grid-template-columns:1fr;gap:34px;justify-items:center}
   .hero-demo .hero-visual{order:-1;width:min(86%,380px)}
   .hero-demo .hero-content{order:1}.hero-demo .hero-side{order:2;align-items:center;width:100%}
-  .hero-bgtext{font-size:11.5vw;top:8%}
+  .hero-bgtext{font-size:10.5vw;top:8%;line-height:.95}.bg-br{display:inline}
   .hero-expertise{align-self:center;padding:0}
   .hero-stats{grid-template-columns:repeat(3,1fr);width:100%;max-width:520px}
   .stat-num{font-size:1.7rem}.stat-card{padding:10px 12px}
