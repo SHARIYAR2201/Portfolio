@@ -24,6 +24,7 @@
     
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="motion-effects.css">
+    <link rel="stylesheet" href="hero-demo.css">
 </head>
 <body>
     <!-- Background Elements -->
@@ -67,7 +68,7 @@
 
     <main>
         <!-- Hero Section -->
-        <section id="hero" class="hero-section section-padding scroll-target">
+        <section id="hero" class="hero-section hero-demo section-padding scroll-target">
             <div class="container hero-grid">
                 <div class="hero-content reveal-up">
                     <div class="hero-badge">
@@ -113,9 +114,10 @@
                 <div class="hero-visual reveal-scale">
                     <div class="image-frame">
                         <div class="frame-backdrop"></div>
+                        <span class="hero-bgtext" aria-hidden="true">MERN DEVELOPER</span>
                         <picture>
-                            <source srcset="images/shariyar.webp" type="image/webp">
-                            <img src="images/shariyar.jpg" alt="Md Shariyar Akbar" class="profile-img" width="900" height="1125" fetchpriority="high">
+                            <source srcset="images/shariyar-cutout.webp" type="image/webp">
+                            <img src="images/shariyar-cutout.png" alt="Md Shariyar Akbar" class="profile-img" width="900" height="1125" fetchpriority="high">
                         </picture>
                         <div class="badge-card badge-experience">
                             <div class="badge-icon">
@@ -137,6 +139,22 @@
                         </div>
                     </div>
                 </div>
+                <aside class="hero-side reveal-up">
+                    <div class="hero-expertise">
+                        <h2 class="expertise-title">EXPERTISE</h2>
+                        <ul>
+                            <li>MERN Stack Web Development</li>
+                            <li>LLMs &amp; SLMs Exploration</li>
+                            <li>Data Analytics</li>
+                            <li>AI/ML Practical Solutions</li>
+                        </ul>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat-card"><span class="stat-num"><b data-count="8">8</b>+</span><span class="stat-label">Projects Built</span></div>
+                        <div class="stat-card"><span class="stat-num"><b data-count="4">4</b>+</span><span class="stat-label">Years at BRACU CSE</span></div>
+                        <div class="stat-card"><span class="stat-num"><b data-count="5" data-dec="2">5.00</b></span><span class="stat-label">SSC &amp; HSC GPA</span></div>
+                    </div>
+                </aside>
             </div>
             <a href="#about" class="scroll-down-indicator" aria-label="Scroll to About Section">
                 <span class="scroll-down-mouse">

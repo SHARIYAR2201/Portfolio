@@ -1,0 +1,52 @@
+/* Demo-style hero: giant text behind a cut-out portrait, expertise + stats on the side.
+   Uses your existing colors and variables. */
+.hero-demo{position:relative;overflow:hidden;padding-bottom:0}
+.hero-demo .hero-grid{grid-template-columns:minmax(0,1fr) minmax(300px,440px) minmax(0,1fr);gap:28px;align-items:center;position:relative;z-index:1}
+.hero-demo .hero-visual{align-self:end;justify-content:center}
+.hero-demo .hero-title{font-size:clamp(1.9rem,3.2vw,2.8rem)}
+.hero-demo .image-frame{width:100%;overflow:visible}
+.hero-demo .frame-backdrop{inset:12% -18% 0;border-radius:50%;filter:blur(70px);opacity:.5}
+.hero-demo .profile-img{border:0;border-radius:0;box-shadow:none;object-fit:contain;position:relative;
+  filter:drop-shadow(0 24px 40px rgba(0,0,0,.45));
+  -webkit-mask-image:linear-gradient(#000 80%,transparent 100%);mask-image:linear-gradient(#000 80%,transparent 100%)}
+.hero-bgtext{position:absolute;z-index:-1;left:50%;top:9%;transform:translateX(-50%);white-space:nowrap;
+  font:800 min(9vw,9.5rem)/1 Outfit,Inter,sans-serif;letter-spacing:-.02em;user-select:none;pointer-events:none;
+  color:rgba(var(--accent-primary-rgb),.1);-webkit-text-stroke:1px rgba(var(--accent-primary-rgb),.28)}
+
+.hero-side{display:flex;flex-direction:column;gap:26px;align-self:center;align-items:flex-end}
+.hero-expertise{align-self:flex-start;padding-left:10px}
+.expertise-title{font:700 1.2rem Outfit,sans-serif;letter-spacing:.38em;color:var(--accent-primary);margin:0 0 12px}
+.hero-expertise ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.hero-expertise li{position:relative;padding-left:20px;color:var(--text-secondary);font-size:.95rem;font-weight:500}
+.hero-expertise li:before{content:"";position:absolute;left:0;top:.6em;width:7px;height:7px;border-radius:50%;background:var(--accent-primary);box-shadow:0 0 10px rgba(var(--accent-primary-rgb),.7)}
+.hero-stats{display:grid;gap:10px;width:min(100%,240px)}
+.stat-card{background:var(--bg-surface);border:1px solid var(--border-color);border-radius:16px;padding:12px 18px;
+  backdrop-filter:var(--glass-blur);-webkit-backdrop-filter:var(--glass-blur);box-shadow:var(--card-shadow);transition:border-color .3s,box-shadow .3s}
+.stat-card:hover{border-color:var(--border-hover);box-shadow:var(--card-shadow-hover)}
+.stat-num{display:block;font:800 2.5rem/1 Outfit,sans-serif;background:var(--accent-gradient);-webkit-background-clip:text;background-clip:text;color:transparent}
+.stat-num b{font-weight:800}
+.stat-label{display:block;margin-top:4px;font-size:.7rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--text-muted)}
+.m-on .hero-side>*{opacity:0}
+
+/* badges sit on the chest/shoulders, clear of the face */
+.hero-demo .hero-visual .image-frame .badge-card.badge-projects{top:auto;right:2%;bottom:30%;left:auto}
+.hero-demo .hero-visual .image-frame .badge-card.badge-experience{top:auto;left:2%;bottom:14%;right:auto}
+
+@media (max-width:1000px){
+  .hero-demo .hero-grid{grid-template-columns:1fr;gap:34px;justify-items:center}
+  .hero-demo .hero-visual{order:-1;width:min(86%,380px)}
+  .hero-demo .hero-content{order:1}.hero-demo .hero-side{order:2;align-items:center;width:100%}
+  .hero-bgtext{font-size:11.5vw;top:8%}
+  .hero-expertise{align-self:center;padding:0}
+  .hero-stats{grid-template-columns:repeat(3,1fr);width:100%;max-width:520px}
+  .stat-num{font-size:1.7rem}.stat-card{padding:10px 12px}
+  .hero-demo .hero-visual .image-frame .badge-card.badge-projects{right:2%;bottom:30%}
+  .hero-demo .hero-visual .image-frame .badge-card.badge-experience{left:2%;bottom:12%}
+}
+
+/* "I am a ..." always stays on ONE line; font scales to the column width */
+.hero-demo .hero-content{container-type:inline-size}
+.hero-demo .typing-container{white-space:nowrap;overflow:hidden;font-size:clamp(12px,4cqw,26px);line-height:1.5;min-height:1.5em}
+/* buttons never squash or get covered */
+.hero-demo .hero-actions{flex-wrap:wrap;gap:14px}
+.hero-demo .hero-actions .btn{white-space:nowrap;padding-inline:22px}

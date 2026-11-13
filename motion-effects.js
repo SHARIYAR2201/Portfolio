@@ -19,6 +19,14 @@
   animate('.header-container', { opacity: [0, 1], y: [-20, 0] }, { duration: 0.7, ease });
   animate('.hero-content > *', { opacity: [0, 1], y: [30, 0] }, { delay: stagger(0.1, { startDelay: 0.15 }), duration: 0.8, ease });
 
+
+  // Hero side: slide in + stat count-up
+  animate('.hero-side > *', { opacity: [0, 1], x: [40, 0] }, { delay: stagger(0.15, { startDelay: 0.5 }), duration: 0.8, ease });
+  $$('.hero-stats [data-count]').forEach(el => {
+    const to = parseFloat(el.dataset.count), d = +(el.dataset.dec || 0);
+    animate(0, to, { delay: 0.9, duration: 1.6, ease: 'easeOut', onUpdate: v => { el.textContent = v.toFixed(d); } });
+  });
+
   // Floating badges
   animate('.badge-projects', { y: [0, -12, 0] }, { duration: 4.2, repeat: Infinity, ease: 'easeInOut' });
   animate('.badge-experience', { y: [0, 12, 0] }, { duration: 4.8, repeat: Infinity, ease: 'easeInOut' });
